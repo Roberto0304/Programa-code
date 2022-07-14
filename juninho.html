@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <title>Document</title>
+</head>
+
+
+<body>
+    <form action="">
+        <input type="text" id="name" placeholder="digite seu nome">
+        <button type="button" onclick="enviar()">Exibir meu nome</button>
+        <p id="texto_final"></p>
+    </form>
+
+
+</body>
+
+
+    <script>
+        function enviar(){
+            var valor = document.getElementById("name").value;
+            
+            document.getElementById("texto_final").innerHTML = "o nome que você digitou é: "+valor;
+            
+        }
+    </script>
+</html>
