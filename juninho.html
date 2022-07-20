@@ -8,21 +8,19 @@
 
 
 <body>
-    <form action="">
-        <input type="text" id="name" placeholder="digite seu nome">
-        <button type="button" onclick="enviar()">Exibir meu nome</button>
-        <p id="texto_final"></p>
-    </form>
-
-
+    <h1>Calculando sua idade com JS</h1>
+        <input id="idadecalculada">
+        <button onclick="idade()">mostrar minha idade</button>
+        <p id="resultado"> Resultado aqui</p>
 </body>
 
-
+           
     <script>
-        function enviar(){
-            var valor = document.getElementById("name").value;
-            
-            document.getElementById("texto_final").innerHTML = "o nome que você digitou é: "+valor;
+        function idade(){
+            var ano, calculo;
+            var ano = document.getElementById("idadecalculada").value
+            calculo = 2022 - ano;
+            document.getElementById("resultado").innerHTML = calculo;            
             
         }
     </script>
