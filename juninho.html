@@ -9,19 +9,38 @@
 
 <body>
     <h1>Calculando sua idade com JS</h1>
-        <input id="idadecalculada">
-        <button onclick="idade()">mostrar minha idade</button>
-        <p id="resultado"> Resultado aqui</p>
+    <input id="dataDeNascimento" type="date">
+    <button onclick="calcularIdade()">Mostrar minha idade</button>
+    <p id="resultado">Sua idade</p>
+    <p id="maioridade">Sua maioridade</p>
+    <p id="Idoso"></p>
 </body>
 
-           
-    <script>
-        function idade(){
-            var ano, calculo;
-            var ano = document.getElementById("idadecalculada").value
-            calculo = 2022 - ano;
-            document.getElementById("resultado").innerHTML = calculo;            
+
+<script>
+    function calcularIdade() {
+        var dataDeNascimento = new Date(document.getElementById("dataDeNascimento").value).getFullYear();
+        var dataDeHoje = new Date().getFullYear();
+        var idade = dataDeHoje - dataDeNascimento;
+        document.getElementById("resultado").innerHTML = idade;
+
+        if (idade > 60) {
+            document.getElementById("maioridade").innerHTML = 'Você é IDOSO';
+        } else if (idade > 18) {
+            document.getElementById("maioridade").innerHTML= 'Você é de MAIOR';
+        } else if (idade <18) {
+            document.getElementById("maioridade").innerHTML='Você é de MENOR';
             
         }
-    </script>
+            
+        
+    }
+        
+
+        
+        
+
+    
+</script>
+
 </html>
